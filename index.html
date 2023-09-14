@@ -1,0 +1,145 @@
+<!--
+    목표: html 이랑 css 만으로 완성하기 + 호스팅까지 + 완벽x
+    1. 타이포 배치
+    2. 색깔 랜덤 전환
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.min.js"></script>
+    <style>
+        body {
+            margin: 30px;
+            background-color: blue;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .item_1{
+            width: 300px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: rgb(255, 85, 0);
+            }
+        .item_2{
+            width: 300px;
+            height: 200px;
+            background-color: rgb(141, 141, 141);
+            }
+        .item_2{
+            width: 300px;
+            height: 200px;
+            background-color: rgb(141, 141, 141);
+            }
+        .item_3 {
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 200px solid rgb(51, 137, 54);
+        }
+        .item_4 {
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 200px solid rgb(51, 137, 54);
+        }        
+        .item_5 {
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 200px solid rgb(51, 137, 54);
+        }
+        .grid_footer {
+            display: grid;
+            grid-template-columns: 650px 580px auto 100px;
+            /* postion */
+            top: 650px;
+            position: fixed;
+            /* style */
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function setup () {
+            createCanvas (windowWidth, windowHeight);
+            noCursor();
+            background('gray,0');
+        }
+
+        function mouseMoved() {
+            background('gray,0');
+            ellipse (mouseX,mouseY,30,30);
+        }
+
+        function windowResiezd () {
+            resizeCanvas(windowWidth, windowHeight);
+            background(0);
+}
+        
+    </script>
+    <div class = "container">
+        <div class = "item_1"></div>
+        <div class = "item_2"></div>
+        <div class = "item_3"></div>
+        <div class = "item_4"></div>
+        <div class = "item_5"></div>
+    </div>
+
+    <div class = "grid_footer">
+        <div class="footer_1">
+            Contact
+        </div>
+        <div class="footer_2">
+            jiyeh3746@gmail.com <br> 010-4153-3746 
+        </div>
+        <div class="footer_3">
+            Based in seoul
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!--
+            .contaier {
+            display: flex;
+            column-gap: 10px;
+            position : absolute;
+            z-index: 2;
+            align-items: center;
+        }
+
+    .item_item_2 {
+    width: 300px;
+    height: 200px;
+    background-color:rgb(0, 0, 0)
+
+        .item_4 {
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 200px solid rgb(39, 39, 39);
+        }
+        .item_5 {
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 200px solid rgb(0, 175, 228);
+        }--> 
